@@ -1,0 +1,31 @@
+{
+  // Educational Study GHCP Harness — workspace-scoped Copilot isolation.
+  // Goal: only customizations defined IN THIS REPO influence the agent.
+  // User-profile prompts/instructions and ~/.claude/CLAUDE.md are suppressed.
+  // Canonical reference: https://code.visualstudio.com/docs/copilot/customization/custom-instructions
+
+  // Allow only the workspace .github/instructions folder for *.instructions.md.
+  // Explicitly disable user-profile locations.
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "~/.copilot/instructions": false,
+    "~/.claude/rules": false
+  },
+
+  // Allow only the workspace .github/prompts folder for *.prompt.md.
+  "chat.promptFilesLocations": {
+    ".github/prompts": true
+  },
+
+  // Keep .github/copilot-instructions.md active (the ES harness contract).
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+
+  // Keep workspace AGENTS.md active.
+  "chat.useAgentsMdFile": true,
+
+  // Disable CLAUDE.md, which would otherwise pull from ~/.claude/CLAUDE.md.
+  "chat.useClaudeMdFile": false,
+
+  // Do not climb out of this repo for customizations during monorepo discovery.
+  "chat.useCustomizationsInParentRepositories": false
+}
