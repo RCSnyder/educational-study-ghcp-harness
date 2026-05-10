@@ -1,0 +1,64 @@
+# Git LFS — large/binary source materials live in raw/ and occasionally elsewhere.
+# Markdown, JSON, YAML, and code stay in regular git so diffs and grep keep working.
+
+# Documents
+*.pdf       filter=lfs diff=lfs merge=lfs -text
+*.epub      filter=lfs diff=lfs merge=lfs -text
+*.djvu      filter=lfs diff=lfs merge=lfs -text
+*.docx      filter=lfs diff=lfs merge=lfs -text
+*.doc       filter=lfs diff=lfs merge=lfs -text
+*.pptx      filter=lfs diff=lfs merge=lfs -text
+*.ppt       filter=lfs diff=lfs merge=lfs -text
+*.xlsx      filter=lfs diff=lfs merge=lfs -text
+*.xls       filter=lfs diff=lfs merge=lfs -text
+*.odt       filter=lfs diff=lfs merge=lfs -text
+*.rtf       filter=lfs diff=lfs merge=lfs -text
+
+# Images (scans, figures, diagrams used as raw input)
+*.png       filter=lfs diff=lfs merge=lfs -text
+*.jpg       filter=lfs diff=lfs merge=lfs -text
+*.jpeg      filter=lfs diff=lfs merge=lfs -text
+*.gif       filter=lfs diff=lfs merge=lfs -text
+*.tif       filter=lfs diff=lfs merge=lfs -text
+*.tiff      filter=lfs diff=lfs merge=lfs -text
+*.webp      filter=lfs diff=lfs merge=lfs -text
+*.heic      filter=lfs diff=lfs merge=lfs -text
+*.psd       filter=lfs diff=lfs merge=lfs -text
+
+# Audio / video (lectures, interviews, oral arguments)
+*.mp3       filter=lfs diff=lfs merge=lfs -text
+*.wav       filter=lfs diff=lfs merge=lfs -text
+*.flac      filter=lfs diff=lfs merge=lfs -text
+*.m4a       filter=lfs diff=lfs merge=lfs -text
+*.ogg       filter=lfs diff=lfs merge=lfs -text
+*.mp4       filter=lfs diff=lfs merge=lfs -text
+*.mov       filter=lfs diff=lfs merge=lfs -text
+*.mkv       filter=lfs diff=lfs merge=lfs -text
+*.webm      filter=lfs diff=lfs merge=lfs -text
+
+# Datasets / archives
+*.zip       filter=lfs diff=lfs merge=lfs -text
+*.tar       filter=lfs diff=lfs merge=lfs -text
+*.tgz       filter=lfs diff=lfs merge=lfs -text
+*.gz        filter=lfs diff=lfs merge=lfs -text
+*.bz2       filter=lfs diff=lfs merge=lfs -text
+*.7z        filter=lfs diff=lfs merge=lfs -text
+*.parquet   filter=lfs diff=lfs merge=lfs -text
+*.feather   filter=lfs diff=lfs merge=lfs -text
+*.h5        filter=lfs diff=lfs merge=lfs -text
+*.hdf5      filter=lfs diff=lfs merge=lfs -text
+*.npz       filter=lfs diff=lfs merge=lfs -text
+*.sqlite    filter=lfs diff=lfs merge=lfs -text
+*.db        filter=lfs diff=lfs merge=lfs -text
+
+# Exports
+*.bib       text
+*.csv       text
+*.tsv       text
+*.json      text
+*.md        text
+*.yml       text
+*.yaml      text
+
+# Normalize line endings on text
+* text=auto eol=lf
